@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  nextjs-app:
+    image: my-favorite-docker-image
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/nextjs/src
+    command: npm run dev # 開発用のコマンド
